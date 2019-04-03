@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style>	
+			.box{
+				background-color: lightblue;
+				height:180px;
+				width:500px;
+				border: 1px solid red;
+			}
+			.box1{
+			background-color: #A30563;
+				height:150px;
+				width:500px;		
+				border: 1px solid red;
+			}
+		
+		</style>	
+		<script>
+			function liczenie(){
+				let dor = document.getElementById("1").value;
+				let dz = document.getElementById("2").value;
+				let dni = document.getElementById("3").value;
+				if (!isNaN(dor) && !isNaN(dz) && !isNaN(dni) && dor!= "" && dz!= "" && dni!= "" );
+			{
+			var koszt = (dor*35+dz*25)*dni;
+			document.getElementById("wynik").innerHTML="Dokonałeś rezerwacji na "+dni+" dni <br> dla "+dor+" dorosłych "+dz+" dzieci.<br>Koszt całkowity noclegów wynosi "+koszt+" zł. ";
+			}}
+		</script>
+	</head>
+	<body>
+		<div class="box" id="JD">
+		<form method="post">
+		<table>
+			<tr><td>Podaj liczbę dorosłych:</td><td><input type="text" id="1"></td></tr> 
+			<tr><td>Podaj liczbę dzieci:</td><td><input type="text" id="2"></td></tr>
+			<tr><td>Podaj liczbę dni:</td><td><input type="text" id="3"></td></tr>
+			<tr><td colspan="2" align="right">
+			<input type="button" id="przycisk" value="oblicz" onclick="liczenie()">	
+			</td></tr>
+		</table>		
+		</form>		
+		</div>
+		<div class="box1" id="wynik"></div>
+	</body>
+</html>
