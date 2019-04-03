@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style>
+			#error_msg {
+				color:red;
+				display:none;
+				border: 1px solid red;
+				padding:0.25em;
+				display:none;
+				
+			}
+		
+		</style>	
+		<script>
+			function zapisz(event) {
+				let e = document.forms[0];
+				let imie = e.firstname.value.trim();
+					if(imie.length == 0) {
+						console.log("Imie jest puste jak twój łeb!!!");
+						let err = document.getElementById("error_msg");
+						err.style.display = "block";
+					} else {
+					let err = document.getElementById("error_msg");
+					err.style.display = "hidden";
+					console.log("Gratuluje umiesz wpisać poprawnie swoje imie!");
+					console.log(imie);
+					console.log("PAJAC");
+					}
+			}
+		
+		
+		</script>
+	</head>
+	<body>
+		<form method="POST" action="#" name="Say welcome">
+			<input type="text" name="firstname">
+			<p id="error_msg">Ups coś poszło nie tak sprawdź czy nie masz nadwyżki chromosomów</p>
+			<input type=button value="wyślij dane" onclick="zapisz()">
+		</form>
+	
+	
+	
+	
+	
+	
+	
+	</body>
+</html>
